@@ -83,3 +83,5 @@ jobs:
       - name: Run tests
         run: |
           npm run test -- --colors
+
+# uloha - pravidlo pre hlavnu vetvu (main), ze nemozes priamo pushovat, musis urobit PR, musi prejst build a test
