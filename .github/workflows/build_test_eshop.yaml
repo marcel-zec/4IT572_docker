@@ -5,7 +5,7 @@ on:
   push:
 
 jobs:
-  # install node modules and save it to cache
+  # install node modules and save it to cache for the other jobs
   Install:
     runs-on: ubuntu-latest
 
@@ -30,7 +30,8 @@ jobs:
       - name: Install packages with npm
         run: |
           npm ci
-  #
+
+  # use node_modelus from cache and build app
   Build:
     needs: Install
     runs-on: ubuntu-latest
