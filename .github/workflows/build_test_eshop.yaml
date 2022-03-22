@@ -2,13 +2,13 @@ name: 'Builder and test our eShop'
 
 on:
   workflow_dispatch:
-  push
+  push:
 
 jobs:
   Install:
     runs-on: ubuntu-latest
 
-    steps: 
+    steps:
       - name: Git Checkout
         uses: actions/checkout@v3
         with:
