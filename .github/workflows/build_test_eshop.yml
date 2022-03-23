@@ -1,5 +1,4 @@
 name: 'Builder and test our eShop'
-
 on:
   workflow_dispatch:
   push:
