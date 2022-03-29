@@ -96,6 +96,7 @@ jobs:
         run: |
           npm run test -- --colors
 
+  #deploy
   Deploy:
     needs: [Build, Test]
     runs-on: ubuntu-latest
@@ -107,6 +108,7 @@ jobs:
         with:
           token: ${{secrets.WORKFLOW_TOKEN}}
 
+      #load from cache
       - name: Load node modules and build folder
         uses: actions/cache@v3
         with:
